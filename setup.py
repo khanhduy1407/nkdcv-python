@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='nkdcv-python',
     packages=['nkdcv'],
-    version='1.1.2',
+    version='1.2.0',
     license='MIT',
     description='This is a Computer Vision package that makes its easy to run Image processing and AI functions.',
     author='NKDuy',
@@ -12,7 +12,6 @@ setup(
     keywords=['ComputerVision', 'HandTracking', 'FaceTracking', 'PoseEstimation'],
     install_requires=[
         'opencv-python',
-        'mediapipe',
         'numpy'
     ],
     classifiers=[
