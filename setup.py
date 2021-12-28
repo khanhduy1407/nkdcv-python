@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='nkdcv-python',
     packages=['nkdcv'],
-    version='1.5.1',
+    version='1.5.2',
     license='MIT',
     description='This is a Computer Vision package that makes its easy to run Image processing and AI functions.',
     author='NKDuy',
