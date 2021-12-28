@@ -7,13 +7,14 @@ By: NKDuy
 import serial
 import time
 import logging
+import serial.tools.list_ports
 
 class SerialObject:
     """
     Allow to transmit data to a Serial Device like Arduino.
     Example send $255255000
     """
-    def __init__(self, portNo, baudRate=9600, digits=1):
+    def __init__(self, portNo=None, baudRate=9600, digits=1):
         """
         Initialize the serial object.
         :param portNo: Port Number.
@@ -23,11 +24,25 @@ class SerialObject:
         self.portNo = portNo
         self.baudRate = baudRate
         self.digits = digits
-        try:
-            self.ser = serial.Serial(self.portNo, self.baudRate)
-            print("Serial Device Connected")
-        except:
-            logging.warning("Serial Device Not Connected")
+        connected = False
+        if self.portNo is None:
+            ports = list(serial.tools.list_ports.comports())
+            for p in ports:
+                if "Arduino" in p.description:
+                    print(f'{p.description} Connected')
+                    self.ser = serial.Serial(p.device)
+                    self.ser.baudrate = baudRate
+                    connected = True
+            if not connected:
+                logging.warning("Arduino Not Found. Please enter COM Port Number instead.")
+
+        else:
+            try:
+                self.ser = serial.Serial(self.portNo, self.baudRate)
+                print("Serial Device Connected")
+            except:
+                logging.warning("Serial Device Not Connected")
+
 
     def sendData(self, data):
         """
@@ -56,11 +71,11 @@ class SerialObject:
         return dataList[:-1]
 
 def main():
-    mySerial = SerialObject("COM3", 9600, 1)
+    arduino = SerialObject()
     while True:
-        mySerial.sendData([1, 1, 1, 1, 1])
+        arduino.sendData([1, 1, 1, 1, 1])
         time.sleep(2)
-        mySerial.sendData([0, 0, 0, 0, 0])
+        arduino.sendData([0, 0, 0, 0, 0])
         time.sleep(2)
 
 
