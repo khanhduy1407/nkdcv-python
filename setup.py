@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='nkdcv-python',
     packages=['nkdcv'],
-    version='1.0.0',
+    version='1.1.0',
     license='MIT',
     description='This is a Computer Vision package that makes its easy to run Image processing and AI functions.',
     author='NKDuy',
@@ -21,7 +21,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.6',  # Specify which pyhton versions that you want to support
+        'Programming Language :: Python :: 3.6',  # Specify which python versions that you want to support
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
