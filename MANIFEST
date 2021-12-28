@@ -10,6 +10,7 @@ nkdcv\HandTrackingModule.py
 nkdcv\PIDModule.py
 nkdcv\PlotModule.py
 nkdcv\PoseModule.py
+nkdcv\SelfiSegmentationModule.py
 nkdcv\SerialModule.py
 nkdcv\Utils.py
 nkdcv\__init__.py
