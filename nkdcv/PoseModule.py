@@ -120,6 +120,9 @@ class PoseDetector:
                         cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), 2)
         return angle
 
+    def angleCheck(self, myAngle, targetAngle, addOn=20):
+        return targetAngle - addOn < myAngle < targetAngle + addOn
+
 
 def main():
     cap = cv2.VideoCapture(0)
