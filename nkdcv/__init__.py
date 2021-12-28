@@ -5,3 +5,4 @@ from nkdcv.PoseModule import PoseDetector
 from nkdcv.Utils import stackImages, cornerRect
 from nkdcv.FPS import FPS
 from nkdcv.SerialModule import SerialObject
+from nkdcv.PIDModule import PID

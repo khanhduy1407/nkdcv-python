@@ -5,6 +5,7 @@ nkdcv\FPS.py
 nkdcv\FaceDetectionModule.py
 nkdcv\FaceMeshModule.py
 nkdcv\HandTrackingModule.py
+nkdcv\PIDModule.py
 nkdcv\PoseModule.py
 nkdcv\SerialModule.py
 nkdcv\Utils.py
