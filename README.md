@@ -2,7 +2,7 @@
 
 This is a Computer Vision package that makes its easy to run Image processing and AI functions.
 
-At the core it uses [OpenCV](https://github.com/opencv/opencv) and [Mediapipe](https://github.com/google/mediapipe) libraries. 
+At the core it uses [OpenCV](https://github.com/opencv/opencv) and [Mediapipe](https://github.com/google/mediapipe) libraries.
 
 ## Installation
 
