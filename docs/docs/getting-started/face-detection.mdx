@@ -1,0 +1,59 @@
+---
+title: Face Detection
+---
+
+# Face Detection
+
+```mdx-code-block
+import BrowserWindow from '@site/src/components/BrowserWindow';
+```
+
+---
+
+## Overview
+
+Face Detection is an ultrafast face detection solution that comes with 6 landmarks and multi-face support
+
+![Face Detection Overview](/img/face_detection_overview.jpeg)
+
+---
+
+## Usage
+
+```py title="main.py"
+# highlight-next-line
+from nkdcv.FaceDetectionModule import FaceDetector
+import cv2
+
+cap = cv2.VideoCapture(0)
+# highlight-next-line
+detector = FaceDetector()
+
+while True:
+    success, img = cap.read()
+    # highlight-start
+    img, bboxs = detector.findFaces(img)
+
+    if bboxs:
+        # bboxInfo - "id","bbox","score","center"
+        center = bboxs[0]["center"]
+        cv2.circle(img, center, 5, (255, 0, 255), cv2.FILLED)
+    # highlight-end
+
+    cv2.imshow("Image", img)
+    cv2.waitKey(1)
+```
+
+`FaceDetector()` will call the API to FaceDetectionModule
+
+Then use `detector.findFaces(img)` will detect the position of the face and display a box around the face
+
+## Result
+
+```mdx-code-block
+<BrowserWindow>
+
+![Face Detection Example](/img/face_detection_example.png)
+
+</BrowserWindow>
+```
