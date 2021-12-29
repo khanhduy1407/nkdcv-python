@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>NKDuy Docs</ShortName>
+  <Description>Search NKDuy Docs</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://khanhduy1407.github.io/nkdcv-python/vi/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://khanhduy1407.github.io/nkdcv-python/vi/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://khanhduy1407.github.io/nkdcv-python/vi/opensearch.xml" />
+  <moz:SearchForm>https://khanhduy1407.github.io/nkdcv-python/vi/</moz:SearchForm>
+</OpenSearchDescription>
