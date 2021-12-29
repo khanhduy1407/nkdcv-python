@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknkdcv_python=self.webpackChunknkdcv_python||[]).push([[97],{3433:function(t){t.exports=JSON.parse('{"title":"Getting Started","slug":"/category/getting-started","permalink":"/category/getting-started","navigation":{"previous":{"title":"Intro","permalink":"/"},"next":{"title":"Installation","permalink":"/getting-started/installation"}}}')}}]);
